@@ -1,0 +1,14 @@
+import '~/assets/sass/main.sass';
+import '~/assets/sprite/';
+import '~/js/init/axios';
+import '~/js/init/css-props';
+import '~/js/init/modal';
+import '~/js/init/forms';
+import '~/js/init/tabs';
+import '~/js/init/accordions';
+import '~/js/init/selects';
+import '~/blocks/mixins/loader/loader';
+import '~/blocks/mixins/message-modal/message-modal';
+import '~/blocks/mixins/video/video';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';

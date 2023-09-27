@@ -1,0 +1,43 @@
+.socials
+    display: flex
+    column-gap: 16px
+
+.socials__link
+    position: relative
+    overflow: hidden
+    border: 1px solid $primary
+    width: 36px
+    height: 36px
+    transition: $trs
+    @media (max-width: $tab)
+        width: 54px
+        height: 54px
+    svg
+        height: 22px
+        width: 22px
+        color: $primary
+        position: relative
+        z-index: 1
+        transition: $trs
+        @media (max-width: $tab)
+            height: 32px
+            width: 32px
+    &::before
+        content: ''
+        position: absolute
+        top: -1px
+        left: -1px
+        bottom: -1px
+        right: -1px
+        display: block
+        border-radius: 100%
+        background: $primary
+        transform: scale(0)
+        transition: $trs
+    &:hover
+        background-color: $primary
+        svg
+            color: $white
+        &::before
+            transform: scale(1)
+            

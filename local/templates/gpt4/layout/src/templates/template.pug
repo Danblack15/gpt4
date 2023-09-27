@@ -1,0 +1,18 @@
+doctype html
+html(lang='ru')
+    include ../templates/mixins.pug
+    include ../templates/head.pug
+    
+    body
+        include ../templates/modals.pug
+        .modals.js-modals
+    
+        //- Header
+        include ../blocks/mixins/header/header.pug
+
+        //- Main content
+        main
+            block content
+
+        //- Footer
+        include ../blocks/mixins/footer/footer.pug
