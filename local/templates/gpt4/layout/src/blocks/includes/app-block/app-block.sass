@@ -1,0 +1,31 @@
+.app-block
+    width: 100%
+    margin-top: 45px
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    grid-gap: 20px
+
+    &__info 
+        margin-bottom: 35px
+        max-width: calc(100% / 2.3)
+
+        & a
+            @extend .text-sm
+
+            &:first-child
+                color: $light-blue
+
+            &:last-child
+                color: $peach
+
+        & h2
+            margin: 10px 0 23px
+            @extend .purple-gradient
+            line-height: 1.32
+
+        & p
+            margin-bottom: 30px
+            @extend .text-sm
+            line-height: 1.87
+            color: $blue
