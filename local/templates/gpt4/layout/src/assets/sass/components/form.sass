@@ -6,24 +6,23 @@
 .form__input,
 .form__textarea
     width: 100%
-    padding: 16px 18px
-    background: #F0F0F0
-    border-radius: 10px
-    font-size: 16px
-    line-height: 110%
-    border: 1px solid #F0F0F0
+    padding: 24px 0 22px 32px
+    background: #052D56
+    border-radius: 5px
+    border: 1px solid transparent
+    @extend .text-b
     +manrope(r)
-    color: $black
+    color: $white
     transition: $trs
-    @media (max-width: $tab)
-        font-size: 14px
+    &:hover
+        background: #083b6e
     &:focus
-        border: 1px solid rgba(green, .5)
+        background: #083b6e
+        border: 1px solid $orange
     &:placeholder
-        color: #8C8C8C
+        color: #92AAC1
     &.error
-        color: red
-        border: 1px solid red
+        
     
 .form__textarea
     height: 90px

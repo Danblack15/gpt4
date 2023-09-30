@@ -1,8 +1,33 @@
 .header
-    background: #000
-    color: #fff
+    padding: 70px 0
 
-.header__inner
-    display: flex
-    align-items: center
-    justify-content: space-between
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        grid-gap: 20px
+
+    &__main
+        display: flex
+        align-items: center
+        grid-gap: 68px
+
+    nav
+        & ul
+            display: flex
+            grid-gap: 46px
+
+            & a
+                @extend .text-md
+                +manrope(m)
+
+    &__buttons
+        display: flex
+        align-items: center
+        grid-gap: 30px
+
+        & .btn
+            &:first-child
+                transition: $trs opacity
+                @extend .link-opacity
+    

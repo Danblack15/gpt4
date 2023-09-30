@@ -11,7 +11,7 @@
 =heading-typo
     +manrope(m)
     letter-spacing: -0.02em
-    line-height: 0.96
+    line-height: 1
 
 .t-h1
     +heading-size-1
@@ -61,3 +61,27 @@
 .t-tac
     text-align: center
 
+
+/* Text Size */
+.text-b
+    +yo('font-size', (375px: 20px, 1440px: 20px))
+
+.text-md
+    +yo('font-size', (375px: 18px, 1440px: 18px))
+
+.text-sm
+    +yo('font-size', (375px: 16px, 1440px: 16px))
+
+.text-lt
+    +yo('font-size', (375px: 14px, 1440px: 14px))
+
+.text-lt-2
+    +yo('font-size', (375px: 12px, 1440px: 12px))
+
+
+/* Text styles */
+.purple-gradient
+    background: linear-gradient(90deg, #AE67FA 1.84%, #F49867 102.67%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent

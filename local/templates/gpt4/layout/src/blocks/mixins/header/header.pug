@@ -1,27 +1,24 @@
 header.header
     .header__inner.container
-        +logo.header__logo
-        +select({
-            name: 'city',
-            placeholder: 'Выберите город',
-            checked: true,
-            options: [
-                {
-                    value: 'Санкт-Петербург',
-                    innerHTML: `Санкт-Петербург`,
-                    checked: true,
-                    id: 1,
-                },
-                {
-                    value: 'Архангельск',
-                    innerHTML: `Архангельск`,
-                    id: 2,
-                },
-                {
-                    value: 'Сыктывкар',
-                    innerHTML: `Сыктывкар`,
-                    id: 3,
-                },
-            ]
-        }).select--common
-        +socials().header__socils
+        .header__main
+            +logo.header__logo
+            nav 
+                ul 
+                    li 
+                        a(href="#") Главная
+                    li 
+                        a(href="#") Что такое GPT?
+                    li 
+                        a(href="#") Open AI
+                    li 
+                        a(href="#") Кейсы
+                    li 
+                        a(href="#") Кейсы
+
+        .header__buttons 
+            +btn({
+                text: 'Войти'
+            }).btn
+            +btn({
+                text: 'Регистрация'
+            }).btn.btn--orange

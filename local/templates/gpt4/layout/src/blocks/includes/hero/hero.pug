@@ -1,0 +1,31 @@
+.hero
+    .hero__light 
+        include ../../../assets/img/svg/light/hero.svg
+    .hero__body 
+        h1 Построим Что-нибудь<br>Невероятное с<br>GPT-4 OpenAI
+        .hero__body-text
+            p Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили.
+        form(data-form="start") 
+            .form__input-wrapper
+                input(type="email" placeholder="Введите Email").form__input.validate
+            +btn({
+                text: 'Начать'
+            }).btn.btn--orange
+        .hero__people-wrapper
+            .hero__people-list
+                each i in [1, 2, 3, 4, 5, 6]
+                    .hero__people-item
+                        +people-item(`../../assets/img/people/p${i}.png`)
+                .hero__people-item.hero__people-item--last(data-content="1.6k+")
+                        +people-item('../../assets/img/people/p7.png')
+            p 1,600 человек запросило доступ за последние  24 часа
+
+    .hero__image
+        .hero__image-mask
+            img(src="../../../assets/img/hero.png", alt="")
+        .hero__image-light
+            include ../../../assets/img/svg/light/mask.svg
+
+    .hero__right 
+        include ../../../assets/img/svg/light/hero-right.svg
+        

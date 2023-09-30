@@ -1,0 +1,98 @@
+.hero
+    width: 100%
+
+    &__light 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+
+    &__body 
+        & h1
+            margin-bottom: 33px
+            line-height: 1.2
+            @extend .purple-gradient
+            +manrope(eb)
+
+        & form
+            margin-bottom: 37px
+            max-width: 630px
+            display: flex
+
+            & .form__input-wrapper
+                width: 100%
+
+            & .form__input
+                border-top-right-radius: 0
+                border-bottom-right-radius: 0
+
+            & .btn
+                min-width: 174px
+                border-top-left-radius: 0
+                border-bottom-left-radius: 0
+                @extend .text-b
+
+    &__body-text
+        & p
+            margin-bottom: 44px
+            max-width: 554px
+            @extend .text-b
+            color: $blue
+
+    &__people-wrapper
+        display: flex
+        align-items: center
+        grid-gap: 14px
+
+        & p
+            @extend .text-lt-2
+            +manrope(m)
+
+    &__people-list
+        display: flex
+        max-width: 190px
+
+    &__people-item
+        @for $i from 2 through 7
+            &:nth-child(#{$i})
+                transform: translateX(calc(-30% * #{$i - 1}))
+            
+        &--last
+            &::after
+                content: attr(data-content)
+                display: block
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                color: $black
+                font-size: 8px
+                +manrope(eb)
+
+    &__image
+        position: absolute
+        top: 113px
+        right: 24px
+        z-index: -1
+
+    &__image-mask
+        width: 667px
+        height: 700px
+        user-select: none
+
+        & svg
+            width: 100%
+            height: 100%
+
+    &__image-light
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+
+    &__right
+        position: absolute
+        right: 0
+        top: 10%
+        z-index: -1

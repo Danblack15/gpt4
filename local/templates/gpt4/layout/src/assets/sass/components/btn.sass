@@ -2,14 +2,20 @@
     display: flex
     align-items: center
     justify-content: center
-    column-gap: 8px
+    @extend .text-md
+    transition: $trs background, $trs color
     .btn__text, 
-        +manrope(b)
+        +manrope(m)
         white-space: nowrap
 
-.btn--icon
-    @extend .u-center
-    border-radius: 100%
+.btn--orange
+    background: $orange
+    color: $white
+    padding: 16px 20px
+    border-radius: 5px
+
+    &:hover
+        background: $purple
     
 .btn--close
     position: relative
