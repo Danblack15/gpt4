@@ -1,4 +1,5 @@
 .future-block
+    position: relative
     width: 100%
     display: flex
     justify-content: space-between
@@ -49,3 +50,10 @@
             line-height: 1.7
             color: $blue
             +manrope(m)
+
+    &__light 
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%) translateX(calc(var(--unit) * -1))
+        z-index: -1
