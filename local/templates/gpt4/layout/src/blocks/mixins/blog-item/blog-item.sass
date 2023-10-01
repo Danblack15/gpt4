@@ -1,0 +1,54 @@
+.blog-item
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    cursor: pointer
+
+    &:hover
+        & img
+            transform: scale(1.1)
+
+        & p
+            opacity: .8
+
+    &__image 
+        position: relative
+        aspect-ratio: 2/1.2
+        overflow: hidden
+
+        & img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: $trs-4 transform
+
+    &__info 
+        height: 100%
+        background: #042C54
+        padding: 6px 17px 13px 25px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        & span
+            font-size: 11px
+            line-height: 3
+            +manrope(l)
+
+        & p
+            font-size: 19px
+            line-height: 1.6
+            +manrope(eb)
+            transition: $trs opacity
+
+        & a
+            display: block
+            margin-top: 12px
+            @extend .text-lt-2
+            +manrope(l)
+            line-height: 2.91
+

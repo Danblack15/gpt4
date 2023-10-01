@@ -1,0 +1,9 @@
+mixin blog-item(data)
+    .blog-item
+        .blog-item__image 
+            img(src=`../../../assets/img/blog/${data.img}`, alt="blog")
+        .blog-item__info 
+            .blog-item__info-main
+                span !{ data.date }
+                p !{ data.title }
+            a(href="#")  Читать полную статью

@@ -1,0 +1,31 @@
+.blog
+    width: 100%
+    margin-top: 154px
+
+    & h1
+        @extend .purple-gradient
+        line-height: 1.2
+
+    &__body 
+        margin-top: 115px
+        display: grid
+        grid-template-columns: 34% 1fr 1fr
+        grid-template-rows: 323px 323px
+        grid-column-gap: 50px
+        grid-row-gap: 47px
+
+    &__item
+        &--big
+            grid-column-start: 1
+            grid-column-end: 2
+            grid-row-start: 1
+            grid-row-end: 3
+            
+            .blog-item__info 
+                padding: 33px 34px 26px 25px
+
+                & p
+                    font-size: 25px
+
+            .blog-item__image 
+                aspect-ratio: 1/1.3

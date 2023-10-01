@@ -3,7 +3,7 @@
     align-items: center
     justify-content: center
     @extend .text-md
-    transition: $trs background, $trs color
+    transition: $trs background, $trs color, $trs border
     .btn__text, 
         +manrope(m)
         white-space: nowrap
@@ -26,6 +26,17 @@
 
     &:hover
         background: $purple
+
+.btn--transparent
+    background: transparent
+    color: rgba($white, .5)
+    padding: 20px
+    border: 1px solid $white
+
+    &:hover
+        color: $white
+        background: $black
+        border: 1px solid transparent
     
 .btn--close
     position: relative
