@@ -7,6 +7,7 @@ import '~/js/init/forms';
 import '~/js/init/tabs';
 import '~/js/init/accordions';
 import '~/js/init/selects';
+import '~/js/init/parallax';
 import '~/blocks/mixins/loader/loader';
 import '~/blocks/mixins/message-modal/message-modal';
 import '~/blocks/mixins/video/video';

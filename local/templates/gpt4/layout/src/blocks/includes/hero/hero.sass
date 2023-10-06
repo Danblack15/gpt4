@@ -9,10 +9,13 @@
 
     &__body 
         & h1
+            display: inline-flex
             margin-bottom: 33px
             line-height: 1.2
             @extend .purple-gradient
             +manrope(eb)
+            transition: .2s transform
+            transition-timing-function: ease-out
 
         & form
             margin-bottom: 37px
@@ -38,6 +41,8 @@
             max-width: 554px
             @extend .text-b
             color: $blue
+            transition: .2s transform
+            transition-timing-function: ease-out
 
     &__people-wrapper
         display: flex
