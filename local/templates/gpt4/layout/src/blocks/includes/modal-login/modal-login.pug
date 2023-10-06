@@ -1,0 +1,55 @@
++modal('login', 'aside')
+    .modal-login
+        .modal-login__login(data-login-wrapper)
+            .modal-login__light.modal-login__light--right
+                include ../../../assets/img/svg/light/card-right.svg
+            .modal-login__light.modal-login__light--left
+                include ../../../assets/img/svg/light/card-left.svg
+
+            .modal-login__title
+                p Вход
+                button(data-register)
+                    span Регистрация
+                    +svg('arrow-right')
+
+            form(data-form="login" data-form-error="поле не должно быть пустым") 
+                .form__input-wrapper
+                    label.form__label E-mail:
+                    input(type="email" placeholder="ivan@mail.ru" data-mail-error="некорректный e-mail").form__input.validate
+                    span.form__error
+                .form__input-wrapper
+                    label.form__label Телефон:
+                    input(type="tel" placeholder="+7 *** *** ****" data-tel-error="некорректный номер телефона" data-tel).form__input.validate
+                    span.form__error
+                +btn({
+                    text: 'Войти',
+                })(data-submit type="submit").btn.btn--orange.form__submit
+
+        .modal-login__login.modal-login__login--register(data-register-wrapper)
+            .modal-login__light.modal-login__light--right
+                include ../../../assets/img/svg/light/card-right.svg
+            .modal-login__light.modal-login__light--left
+                include ../../../assets/img/svg/light/card-left.svg
+
+            .modal-login__title
+                p Регистрация
+                button(data-login)
+                    span Вход
+                    +svg('arrow-right')
+
+            form(data-form="register" data-form-error="поле не должно быть пустым") 
+                .form__input-wrapper
+                    label.form__label Имя
+                    input(type="text" placeholder="Иван").form__input.validate
+                    span.form__error
+                .form__input-wrapper
+                    label.form__label E-mail:
+                    input(type="email" placeholder="ivan@mail.ru" data-mail-error="некорректный e-mail").form__input.validate
+                    span.form__error
+                .form__input-wrapper
+                    label.form__label Телефон:
+                    input(type="tel" placeholder="+7 *** *** ****" data-tel-error="некорректный номер телефона" data-tel).form__input.validate
+                    span.form__error
+                +btn({
+                    text: 'Регистрация',
+                })(data-submit type="submit").btn.btn--orange.form__submit

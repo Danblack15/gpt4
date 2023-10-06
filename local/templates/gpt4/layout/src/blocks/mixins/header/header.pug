@@ -13,12 +13,12 @@ header.header
                     li 
                         a(href="#") Кейсы
                     li 
-                        a(href="#") Кейсы
+                        a(href="#") Библиотека
 
         .header__buttons 
             +btn({
                 text: 'Войти'
-            }).btn
+            })(data-modal-open="login").btn
             +btn({
                 text: 'Регистрация'
-            }).btn.btn--orange
+            })(data-modal-open="login").btn.btn--orange

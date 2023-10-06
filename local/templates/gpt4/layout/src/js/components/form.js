@@ -55,7 +55,7 @@ export default class Form {
 
         $.qsa('[data-tel]', this.$form).forEach(el => {    
             IMask(el, {
-                mask: '+0 (000) 000-00-00',
+                mask: '+7 (000) 000-00-00',
             });
         });
     }

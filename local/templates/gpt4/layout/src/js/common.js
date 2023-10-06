@@ -10,5 +10,6 @@ import '~/js/init/selects';
 import '~/blocks/mixins/loader/loader';
 import '~/blocks/mixins/message-modal/message-modal';
 import '~/blocks/mixins/video/video';
+import '~/blocks/includes/modal-login/modal-login';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';

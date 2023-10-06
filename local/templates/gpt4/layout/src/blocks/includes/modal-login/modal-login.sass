@@ -1,0 +1,100 @@
+.modal-login
+    height: 100%
+    transform-style: preserve-3d
+    perspective: 900px
+
+    &__login
+        padding: 40px
+        height: 100%
+        background: $primary
+        transform-origin: center left
+        transition: 1s transform
+        overflow: hidden
+
+        @media (max-width: $mob)
+            padding: 16px
+
+        &.wrapper-hide
+            transform: rotate3d(0, 1, 0, -77deg) translateX(-90%)
+
+            @media (max-width: $mob)
+                transform: translateX(-101%)
+
+        &--register
+            position: absolute
+            right: 0
+            top: 0
+            width: 100%
+            z-index: -1
+            transform: rotate3d(0, 1, 0, 78deg) translateX(50%)
+            transform-origin: center right
+
+            @media (max-width: $mob)
+                transform: translateX(101%)
+
+            &.wrapper-show
+                transform: rotate3d(0, 1, 0, 0) translateX(0)
+
+                @media (max-width: $mob)
+                    transform: translateX(0)
+
+            .modal-login__light--right
+                right: unset
+                left: 0
+                bottom: -18px
+                transform: rotate(90deg)
+                z-index: -1
+
+            .modal-login__light--left
+                left: unset
+                right: -40px
+                transform: rotate(90deg)
+                z-index: -1
+
+    &__title
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        & p
+            +heading-size-3
+            +manrope(m)
+
+        & button
+            display: flex
+            grid-gap: 5px
+            align-items: center
+            transition: $trs opacity
+
+            &:hover
+                opacity: .8
+
+                & svg
+                    transform: translateY(2px) translateX(50%)
+            
+            & svg
+                width: 15px
+                height: 12.5px
+                transform: translateY(2px)
+                transition: $trs transform
+
+    & form
+        margin-top: 120px
+
+    & .btn
+        margin-top: 40px
+        width: 100%
+
+    &__light 
+        position: absolute
+        display: inline-flex
+        z-index: 0
+
+        &--left
+            top: 0
+            left: 0
+
+        &--right
+            bottom: 0
+            right: 0
