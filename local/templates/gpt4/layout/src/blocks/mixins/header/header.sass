@@ -1,6 +1,9 @@
 .header
     padding: 70px 0
 
+    @media (max-width: $desktop-sm)
+        padding: 40px 0
+
     &__inner
         display: flex
         align-items: center
@@ -13,6 +16,9 @@
         grid-gap: 68px
 
     nav
+        @media (max-width: $desktop-sm)
+            display: none
+
         & ul
             display: flex
             grid-gap: 46px
@@ -30,4 +36,12 @@
             &:first-child
                 transition: $trs opacity
                 @extend .link-opacity
+
+    &__menu
+        cursor: pointer
+        & svg
+            width: 30px
+            height: 30px
+        @media (min-width: $desktop-sm + 1)
+            display: none
     

@@ -6,11 +6,24 @@
     grid-gap: 138px
     margin-top: 200px
 
+    @media (max-width: $desktop-sm)
+        grid-gap: 50px
+
+    @media (max-width: $tab)
+        flex-direction: column
+        grid-gap: 30px
+
     &__title 
         & h2
             @extend .purple-gradient
             line-height: 1.3
             margin-bottom: 34px
+
+            @media (max-width: $tab)
+                margin-bottom: 15px
+
+                & br
+                    display: none
 
         & a
            @extend .text-sm
@@ -23,6 +36,13 @@
         max-width: calc(100% / 2)
         width: 100%
 
+        @media (max-width: $desktop-sm)
+            max-width: calc(100% / 1.8)
+
+        @media (max-width: $tab)
+            max-width: 100%
+            grid-gap: 30px
+
     &__info-item
         display: flex
         justify-content: space-between
@@ -33,6 +53,9 @@
             max-width: 200px
             line-height: 1.33
             padding-top: 7px
+
+            @media (max-width: $tab)
+                padding-top: 10px
 
             &::before
                 position: absolute
@@ -50,6 +73,9 @@
             line-height: 1.7
             color: $blue
             +manrope(m)
+
+            @media (max-width: $tab)
+                max-width: 50%
 
     &__light 
         position: absolute

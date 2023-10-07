@@ -7,6 +7,11 @@
     margin-left: auto
     padding-left: $unit
     padding-right: $unit
+
+    @media (max-width: $desktop-sm)
+        transition: $trs padding-left, $trs padding-right
+        padding-left: 40px
+        padding-right: 40px
   
 \:root
     --unit: 9.389vw

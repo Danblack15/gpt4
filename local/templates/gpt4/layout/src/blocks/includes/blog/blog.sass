@@ -14,6 +14,14 @@
         grid-column-gap: 50px
         grid-row-gap: 47px
 
+        @media (max-width: $desktop-sm)
+            grid-column-gap: 30px
+            grid-row-gap: 30px
+
+        @media (max-width: $tab)
+            grid-column-gap: 15px
+            grid-row-gap: 15px
+
     &__item
         &--big
             grid-column-start: 1
@@ -25,7 +33,7 @@
                 padding: 33px 34px 26px 25px
 
                 & p
-                    font-size: 25px
+                    +yo('font-size', (375px: 16px, 1440px: 25px))
 
             .blog-item__image 
                 aspect-ratio: 1/1.3

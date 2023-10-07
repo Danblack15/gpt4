@@ -6,8 +6,12 @@
         display: flex
         justify-content: space-between
         padding-bottom: 100px
+        grid-gap: 100px
 
     &__main
+        @media (max-width: $tab)
+            min-width: 180px
+            
         & svg
             width: 118px !important
 
@@ -21,6 +25,9 @@
         justify-content: space-between
         max-width: 640px
         width: 100%
+        
+        @media (max-width: $tab)
+            max-width: 100%
 
         & ul
             & li
