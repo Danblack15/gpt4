@@ -1,4 +1,4 @@
-header.header
+header.header(data-header)
     .header__inner.container
         .header__main
             +logo.header__logo
@@ -22,5 +22,5 @@ header.header
             +btn({
                 text: 'Регистрация'
             })(data-modal-open="login").btn.btn--orange
-            .header__menu 
+            .header__menu(data-modal-open="login")
                 +svg('menu')

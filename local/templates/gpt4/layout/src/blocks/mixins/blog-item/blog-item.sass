@@ -40,7 +40,7 @@
             +manrope(l)
 
         & p
-            font-size: 19px
+            +yo('font-size', (375px: 16px, 1440px: 25px))
             line-height: 1.6
             +manrope(eb)
             transition: $trs opacity
@@ -51,4 +51,3 @@
             @extend .text-lt-2
             +manrope(l)
             line-height: 2.91
-

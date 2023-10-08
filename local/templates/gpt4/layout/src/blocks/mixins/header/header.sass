@@ -3,6 +3,18 @@
 
     @media (max-width: $desktop-sm)
         padding: 40px 0
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 2
+        transition: $trs background, $trs backdrop-filter
+
+    @media (max-width: $tab-sm)
+        padding: 20px 0
+
+    &--background
+        background: rgba($primary, .8)
+        backdrop-filter: blur(5px)
 
     &__inner
         display: flex
@@ -33,15 +45,23 @@
         grid-gap: 30px
 
         & .btn
+            @media (max-width: $mob)
+                display: none
+
             &:first-child
                 transition: $trs opacity
                 @extend .link-opacity
 
     &__menu
         cursor: pointer
+
+        @media (min-width: $desktop-sm + 1)
+            display: none
+
+        @media (max-width: $mob)
+            display: block
+
         & svg
             width: 30px
             height: 30px
-        @media (min-width: $desktop-sm + 1)
-            display: none
     

@@ -2,6 +2,9 @@
     width: 100%
     margin-top: 154px
 
+    @media (max-width: $tab-sm)
+        margin-top: 80px
+
     &__inner
         position: relative
         width: 100%
@@ -15,6 +18,11 @@
         box-shadow: 0px 4px 4px 0px rgba($black, 0.25)
         color: $black
 
+        @media (max-width: $tab-sm)
+            padding: 16px
+            flex-direction: column
+            align-items: flex-start
+
     &__info 
         display: flex
         flex-direction: column
@@ -27,8 +35,17 @@
         & h3
             line-height: 1.45
 
+            @media (max-width: $tab-sm)
+                & br
+                    display: none
+
     & .btn
         position: absolute
         top: 50%
         right: 37px
         transform: translateY(-50%)
+
+        @media (max-width: $tab-sm)
+            position: static
+            transform: translateY(0)
+            margin-top: 16px

@@ -6,7 +6,16 @@
     align-items: flex-end
     grid-gap: 20px
 
+    @media (max-width: $tab-sm)
+        flex-direction: column
+        grid-gap: 16px
+        margin-top: 80px
+
     &__hero
+        @media (max-width: $tab-sm)
+            width: 100%
+            text-align: center
+            
         & img
             @media (max-width: $tab)
                 max-width: 100%
@@ -14,6 +23,9 @@
     &__info 
         margin-bottom: 35px
         max-width: calc(100% / 2.3)
+
+        @media (max-width: $tab-sm)
+            max-width: 100%
 
         & a
             @extend .text-sm
@@ -28,6 +40,10 @@
             margin: 10px 0 23px
             @extend .purple-gradient
             line-height: 1.32
+
+            @media (max-width: $tab-sm)
+                & br
+                    display: none
 
         & p
             margin-bottom: 30px

@@ -2,6 +2,12 @@
     width: 100%
     overflow: hidden
 
+    @media (max-width: $desktop-sm)
+        padding-top: 150px
+
+    @media (max-width: $tab-sm)
+        padding-top: 100px
+
     &__light 
         position: absolute
         top: 0
@@ -27,6 +33,9 @@
                 & br
                     display: none
 
+            @media (max-width: $tab-sm)
+                margin-bottom: 20px
+
         & form
             margin-bottom: 37px
             max-width: 630px
@@ -49,6 +58,9 @@
                 border-bottom-left-radius: 0
                 @extend .text-b
 
+                @media (max-width: $mob)
+                    min-width: 110px
+
     &__body-text
         & p
             margin-bottom: 44px
@@ -60,6 +72,9 @@
 
             @media (max-width: $tab)
                 max-width: 100%
+
+            @media (max-width: $tab-sm)
+                margin-bottom: 20px
 
     &__people-wrapper
         display: flex
@@ -106,6 +121,9 @@
             right: 0
             transform: translateX(50%)
             filter: brightness(30%)
+
+        @media (max-width: $tab-sm)
+            display: none
 
     &__image-mask
         width: 667px

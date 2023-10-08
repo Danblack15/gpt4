@@ -2,6 +2,9 @@
     width: 100%
     margin-top: 154px
 
+    @media (max-width: $tab-sm)
+        margin-top: 80px
+
     & h1
         @extend .purple-gradient
         line-height: 1.2
@@ -22,18 +25,37 @@
             grid-column-gap: 15px
             grid-row-gap: 15px
 
+        @media (max-width: $tab-sm)
+            margin-top: 40px
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 423px 323px 323px
+
+        @media (max-width: $tab)
+            display: flex
+            flex-direction: column
+            grid-template-rows: auto
+            grid-row-gap: 20px
+
     &__item
         &--big
             grid-column-start: 1
             grid-column-end: 2
             grid-row-start: 1
             grid-row-end: 3
+
+            @media (max-width: $tab-sm)
+                grid-column-end: 3
+                grid-row-end: 1
             
             .blog-item__info 
                 padding: 33px 34px 26px 25px
 
-                & p
-                    +yo('font-size', (375px: 16px, 1440px: 25px))
+                @media (max-width: $tab)
+                    padding: 6px 17px 13px 25px
 
             .blog-item__image 
                 aspect-ratio: 1/1.3
+
+                @media (max-width: $tab)
+                    aspect-ratio: 2/1.2
+                    
