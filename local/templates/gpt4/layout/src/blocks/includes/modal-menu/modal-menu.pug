@@ -1,0 +1,24 @@
++modal('menu', 'aside')
+    .modal-login.modal-menu
+        .modal-login__login
+            .modal-menu__title 
+                +logo 
+                button.modal-menu__close(data-modal-close="menu")
+                    +svg('cross')
+            nav 
+                ul 
+                    li.modal-menu__buttons
+                        button(data-modal-open="login" data-modal-close="menu") Вход
+                        button(data-modal-open="login" data-modal-close="menu") Регистрация
+                    li 
+                        a(href="#") Главная
+                    li 
+                        a(href="#") Что такое GPT?
+                    li 
+                        a(href="#") Open AI
+                    li 
+                        a(href="#") Кейсы
+                    li 
+                        a(href="#") Библиотека
+                   
+            

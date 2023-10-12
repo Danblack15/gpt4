@@ -80,6 +80,21 @@
                 transform: translateY(2px)
                 transition: $trs transform
 
+    &__title-main
+        display: flex
+        grid-gap: 15px
+
+    &__close
+        &:hover
+            & svg
+                transform: rotate(90deg) !important
+                opacity: .8 !important
+
+        & svg
+            width: 20px !important
+            height: 20px !important
+            transition: $trs transform, $trs opacity
+
     & form
         margin-top: 120px
 
@@ -91,6 +106,9 @@
         position: absolute
         display: inline-flex
         z-index: 0
+
+        @meida (max-width: $mob)
+        display: none
 
         &--left
             top: 0

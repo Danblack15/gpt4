@@ -1,0 +1,59 @@
+.modal-menu
+	&__title 
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__close
+		&:hover
+			& svg
+				transform: rotate(90deg)
+				opacity: .8
+		& svg
+			width: 20px
+			height: 20px
+			transition: $trs transform, $trs opacity
+
+	& nav
+		margin-top: 50px
+
+		@media (max-width: $mob)
+			display: flex
+			align-items: center
+			height: 100%
+			margin: 0
+
+		& ul
+			display: flex
+			flex-direction: column
+			grid-gap: 15px
+
+			@media (max-width: $mob)
+				align-items: center
+				width: 100%
+				margin-bottom: 100px
+
+			& li
+				transition: $trs transform
+
+				&:hover
+					@media (min-width: $mob)
+						transform: translateX(15px)
+
+			& a
+				@extend .text-b
+
+	&__buttons
+		width: 100%
+		display: flex
+		justify-content: center
+
+		@media (min-width: $mob)
+			display: none
+
+		& button
+			&:first-child
+				&::after
+					content: '/'
+					display: inline-block
+					margin: 0 15px

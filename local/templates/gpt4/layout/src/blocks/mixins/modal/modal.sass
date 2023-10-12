@@ -100,7 +100,18 @@
 
 // Login
 .modal--login
-    // @extend .modal--active
+    .modal__container
+        width: 100%
+        max-width: 420px
+
+        @media (max-width: $mob)
+            max-width: 100%
+
+    .modal__content
+        overflow: visible !important
+
+// Menu
+.modal--menu
     .modal__container
         width: 100%
         max-width: 420px
